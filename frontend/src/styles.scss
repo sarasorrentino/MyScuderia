@@ -1,0 +1,19 @@
+$primary-color: #EF1A2D;
+$secondary-color: #000;
+
+@font-face {
+    font-family: "FormulaOneRegular";
+    src: url('./assets/regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'FormulaOneBold';
+    src: url('./assets/bold.ttf');
+}
+@font-face {
+    font-family: 'FormulaOneWide';
+    src: url('./assets/wide.ttf');
+}
+
+.logo{
+    font-family: "Racing Sans One", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}

@@ -1,0 +1,30 @@
+<div>
+    <h2>Statistiche annuali</h2>
+    <div class="data-container" *ngIf="yearlyData.length > 0; else noDataTemplate">
+        <div class="raw-data">
+            <h3>Table View</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of yearlyData">
+                        <td>{{ data.year }}</td>
+                        <td>{{ data.value }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="chart-container">
+            <h3>Grafico</h3>
+            <!-- <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [legend]="barChartLegend" [chartType]="barChartType"></canvas> -->
+        </div>
+    </div>
+    <ng-template #noDataTemplate>
+        <div class="alert alert-info">Nessuna statistica disponibile.</div>
+    </ng-template>
+</div>

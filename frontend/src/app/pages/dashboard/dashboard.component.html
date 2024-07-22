@@ -1,0 +1,108 @@
+<h1 style="font-family: 'FormulaOneRegular';">Home</h1>
+<hr>
+<div class="row mb-3">
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-calendar-event"></i> Calendario</h5>
+                <p class="card-text">Consulta i prossimi eventi per il Team</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/calendar']"
+                        title="Visualizza eventi">Eventi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 my-1" >
+        <div class="card">
+            <div class="card-body" >
+                <h5 class="card-title">Dettaglio utente</h5>
+                <p class="card-text">
+                    <b>Toto Wolf</b><br>
+                    <small>Mercedes: Team Principal</small><br>
+                    <!-- <b>{{user.first_name + ' ' + user.surname | titlecase}}</b><br>
+                    <small>{{user.role}}</small><br>
+                    <small class="text-muted">{{user.email}}</small>    -->
+                </p>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="text-end">
+                    <button type="button" class="btn btn-sm btn-secondary"
+                    title="Logout">Logout</button>
+                </div>          
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-people"></i> Gestione Profili</h5>
+                <p class="card-text">Gestisci i componenti del team</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/team-overview']"
+                        title="Visualizza Utenti">Users</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-person-workspace"></i> Dipartimento</h5>
+                <p class="card-text">Visualizza il tuo dipartimento di competenza</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/department']"
+                        title="Visualizza Contenuti">Contenuti</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-images"></i> Galleria</h5>
+                <p class="card-text">Visualizza le foto del team messe a disposizione dal social media manager</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/gallery']"
+                        title="Visualizza galleria">Galleria</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-archive"></i> Documenti</h5>
+                <p class="card-text">Visualizza i documenti della FIA® ricevuti dal team.</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/board']"
+                        title="Visualizza Contenuti">Documenti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 my-1">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-clipboard-data"></i> Stats</h5>
+                <p class="card-text">Visualizza le statistiche del team</p>
+            </div>
+            <div class="card-footer text-muted text-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/stats']"
+                        title="Visualizza statistiche">Stats</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

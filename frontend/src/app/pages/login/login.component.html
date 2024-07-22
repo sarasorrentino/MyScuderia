@@ -1,0 +1,14 @@
+<div class=" d-flex flex-row min-vh-100 justify-content-center flex-fixed-width-item align-items-center">
+    <div class="row">
+        <div class="col" style="border-right: solid 1px;" [hidden]="authMethod">
+            <h1 style="font-family: 'FormulaOneRegular';">Welcome to myScuderia</h1>
+        </div>
+        <div class="col justify-content-center">
+            <h2>Login</h2>
+            <app-magic-link [hidden]="authMethod"></app-magic-link>
+            <app-classic-login [hidden]="!authMethod"></app-classic-login>
+            <br>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="changeauthMethod()">{{buttonText()}}</button>
+        </div>
+    </div>
+</div>

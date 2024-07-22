@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Galleria</h2>
+    <div class="row">
+        <div *ngIf="images.length > 0; else noImagesTemplate">
+            <div class="col-md-4" *ngFor="let image of images">
+                <div class="card mb-3">
+                    <img class="card-img-top" [src]="image" alt="Gallery Image">
+                    <div class="card-body">
+                        <p class="card-text">Image description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #noImagesTemplate>
+        <div class="alert alert-info">Nessuna foto disponibile.</div>
+    </ng-template>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Documents</h2>
+    <div class="row">
+        <div *ngIf="pdfs.length > 0; else noPdfsTemplate">
+            <div class="col-md-4" *ngFor="let pdf of pdfs">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <embed [src]="pdf" type="application/pdf" class="pdf-embed" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #noPdfsTemplate>
+            <div class="alert alert-info">Nessun documento disponibile.</div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md">
+        <input type="email" placeholder="Email" class="form-control" [(ngModel)]="email">
+        <small class="text-muted">Riceverai il link solo se già registrato nel sistema</small>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md">
+        <button type="button" class="btn btn-sm btn-primary" (click)="onSubmit()" [disabled]="!email"
+    style="background-color: #EF1A2D; border-color: #EF1A2D;">Ricevi Magic-Link </button>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+    <h2>Membri team</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let member of teamMembers">
+        <div class="card" style="height: 200px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ member.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ member.email }}</h6>
+            <p class="card-text">Role: {{ member.role }}</p>
+            <p *ngIf="isEngineer(member.role)" class="card-text">Department: {{ member.department }}</p>
+            <button class="btn btn-danger" (click)="removeMember(member.id)">
+              Remove
+            </button>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-md-12" *ngIf="teamMembers.length === 0">
+        <div class="alert alert-info">Nessun membro disponibile.</div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)="openAddMemberModal(addMemberModal)">Aggiungi membri</button>
+    <ng-template #addMemberModal let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Add Team Member</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form (submit)="addTeamMember()">
+          <div class="form-group">
+            <label for="memberName">Name</label>
+            <input type="text" class="form-control" id="memberName" [(ngModel)]="newMember.name" required>
+          </div>
+          <div class="form-group">
+            <label for="memberRole">Role</label>
+            <select class="form-control" id="memberRole" [(ngModel)]="newMember.role" required>
+              <option value="pilot">Pilot</option>
+              <option value="engineer">Engineer</option>
+              <option value="social_media_manager">Social Media Manager</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="memberDepartment">Department</label>
+            <input type="text" class="form-control" id="memberDepartment" [(ngModel)]="newMember.department" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+    </ng-template>
+  </div>
+  
